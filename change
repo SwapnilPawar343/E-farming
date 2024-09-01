@@ -1,0 +1,31 @@
+  <table class="table table-bordered table-hover"id="display">
+<thead style=" background:rgb(204, 204, 255);">
+    <th><h3>Product Name.</h3></th>
+    <th><h3>Product Picture.</h3></th>
+    <th><h3>Product Company.</h3></th>
+    <th><h3>Product Price.</h3></th>
+    <th><h3>Procuct Description.</h3></th>
+    <th><h3>Buy Now</h3></th>
+    
+    
+   
+    
+
+    <tbody>
+    echo "<tr id='t1'>";
+                    echo "<td><a href='./ord.php?actionaction=remove&pname='.$r[2].''>".$r[2]."</a></td>";
+                    echo "<td><img src=../product/".$r[1]."></a></td>";
+                    echo "<td style='color:olive;'><b>".$r[3]."</td>";
+                    echo "<td style='color:violet;'><b>₹".$r[4]."</td>";
+                    echo "<td style='color:maroon;'><b>".$r[5]."</td>";
+                    echo "<td><a href=ord.php?action=remove&pname=".$r[0]."><span class='glyphicon glyphicon-shopping-cart'aria-hidden='true'><h2><i>Buy<br>now</h2></i></span></button></td>";
+                   }
+
+                    </tbody>
+                    </table>
+                </div>
+     
+                </div>
+                </div>
+                </div></div>
+                
