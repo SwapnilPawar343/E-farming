@@ -18,33 +18,44 @@
         <![endif]-->
     </head>
     <body>
-
-   
-  
-  <?php
+        <script>
+             function labour() 
+            {
+              
+             var a=document.getElementById("num").value;
+            
+             var b=document.getElementById("pcode").value;
+             var c=document.getElementById("laddress").value;
+           var d=document.getElementById("lwork").value;
+           if (a.length!==10) {
+            alert("Enter a Correct Mobile Number");
+            return false;
+           }
+           if (b.length!==6) {
+            alert("Enter a Correct PIN Code");
+            return false;
+           }
+           else{
+            echo("order Successful");
+           }
+            }
+       
+        </script>
+    <?php
                     require "../dbcon.php";
-                    session_start();
     if (isset($_GET["action"]))
 {
-    require "../dbcon.php";
-    $dname=$_GET["pname"];
-    $sql="select * from product where sid='$dname'";
-   $res= mysqli_query($con,$sql);
-   while ($r=mysqli_fetch_array($res)) {
-    echo "<tr id='t1'>";
-  $sid= "$r[0]";
-    //echo "<td>".$r[1]."</td>";
-    $pname="$r[2]";
-    $pcompany="$r[3]";
-    
-
-   }
-  
-   
+    require "dbcon.php";
+    $dname= $_GET["pname"];
+    $query=mysqli_query($con,$dname);
+    $num_count=mysqli_num_rows($query);
+    if ($num_count) {
+$pass=mysqli_fetch_assoc($query);
+$db_pass =$pass['sid'];
     }
    // $sql="delete from doctor where dname='$dname'";
-    
-
+    echo $dname;
+}
 
 ?>
   
@@ -61,16 +72,16 @@
                      
                  
         
-        <form action="../saveorder.php" method="POST" role="form" enctype="multipart/form-data">
+        <form action="saveorder.php" method="POST" role="form" enctype="multipart/form-data">
             
             <div class="form-group">
                 <label for="">Product Name</label>
-                <input type="text" class="form-control" id="pname" name="pname" readonly="readonly" value="<?php echo $pname;?>"placeholder="Input field">
+                <input type="text" class="form-control" id="pname" name="pname" readonly="readonly" value="<?php echo $dname;?>"placeholder="Input field">
             </div>
-            <div class="form-group" style="visibility: hidden;">
+            <div class="form-group">
                 <label for="">shop Name</label>
-                <input type="text" class="form-control" id="sname" name="sname" readonly="readonly" value="<?php echo $sid;?>"placeholder="Input field">
-            </div> 
+                <input type="text" class="form-control" id="pname" name="pname" readonly="readonly" value="<?php echo $db_pass;?>"placeholder="Input field">
+            </div>
            
             <div class="form-group">
                 <label for="">Full Name</label>
@@ -102,12 +113,11 @@
             </div>
             <label for="s">Payment Method</label>
                                 <select name="pm" id="pm" class="form-control" required="required">
-                                    <option value="Creadit Card">Creadit Card</option>
-                                    <option value="Debit Card">Debit Card</option>
-                                    <option value="UPI">UPI</option>
-                                    <option value="CASH ON DELIVERY">CASH ON DELIVERY</option>
+                                    <option value="h">Creadit Card</option>
+                                    <option value="h1">Debit Card</option>
+                                    <option value="h2">UPI</option>
+                                    <option value="h3">CASH ON DELIVERY</option>
                                 </select><br>
-                                
             <button type="submit" class="btn btn-primary" value="save" name="save">Buy Now</button>
         </form>
         

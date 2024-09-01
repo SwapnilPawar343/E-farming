@@ -18,45 +18,31 @@
         <![endif]-->
     </head>
     <body>
-    <div class="container">
-        <?php
-        include("h.php")
-        ?>
-    </div>
-
-<div class="container">
-
         
-        <table class="table table-hover">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            
+        
+        
+        <table class="table table-hover" style="margin-left: 30px;">
             <thead>
                 <tr>
-                    <th><h2>Agro Doctor Record</h2></th>
+                    <th>Sign In AS</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td></td>
+                    <td> <a class="btn btn-default" href="shop.php" role="button">Shop</a></td>
                 </tr>
+                <tr>
+                    <td> <a class="btn btn-default" href="agrodoctor.php" role="button">AgroDoctor</a></td></tr>
+                    <tr>
+                    <td> <a class="btn btn-default" href="labour.php" role="button">Labour</a></td></tr>
             </tbody>
-            <?php
-                    require "dbcon.php";
-                    $sql="select *from doctor";
-                   $res= mysqli_query($con,$sql);
-                   while ($r=mysqli_fetch_array($res)) {
-                    echo "<tr id='t1'>";
-                    echo "<td>".$r[0]."</td>";
-                    echo "<td>".$r[1]."</td>";
-                    echo "<td>".$r[2]."</td>";
-                    echo "<td><a href='saveagrodoctor.php?action=remove&dname=".$r[0]."'role='button'class='btn btn-danger'><span class='glyphicon glyphicon-trash'aria-hidden='true'></span></button></td>";
-                    echo "</tr>";
-                
-                   }
-                   
-                    ?>
-              
-        </table></div>
-        
-
+        </table>
+        </div>
+       
+       
+       
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Bootstrap JavaScript -->

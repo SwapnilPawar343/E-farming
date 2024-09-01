@@ -36,25 +36,24 @@
         <img src="h2.jpeg" class="img-responsive" alt="Image" style="float: left;">
  
         <h1 style="margin-left:50%" >E-Farming</h1>
-        <h3 style="margin-left:55%">Admine</h3>
                </div>
 <div class="container">
       <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-color: rgb(236, 212, 183);">
             <ul class="nav navbar-nav">
                 <li class="active">
-                <li> <a  href="shoprecord.php">Shops</a></li>
-              <li><a href="agrrecord.php" >Agro Doctors</a></li>
-              <li><a id="course" href="productrecord.php">Products </a></li>
-                <li><a href="diseaserecord.php">Disease</a></li>
-                <li> <a href="market1.php">Market Updation</a></li>
-                <li> <a href="newtechrecord.php">New Technology</a></li>
-                <li> <a href="labourrecord.php">Labour</a></li>
-                <li> <a href="traderrecord.php">Trader</a></li>
+                <li> <a  href="#">Shops</a></li>
+              <li><a href="#" >Agro Doctors</a></li>
+              <li><a id="course" href="#">Products </a></li>
+                <li><a href="#">Disease</a></li>
+                <li> <a href="#">Market Updation</a></li>
+                <li> <a href="#">New Technology</a></li>
+                <li> <a href="#">Labour</a></li>
+                <li> <a href="#">Trader</a></li>
                 <li>    </li>
                 <li>    </li>
                 <li>   </li>
                 <li></li>
-                <li style="float: inline-end;"><a href="../fruntend/index.php"><span class="glyphicon glyphicon-home" style="width:9px"></span> </a></li>
+                <li style="float: inline-end;"><a href="fruntend/index.php"><span class="glyphicon glyphicon-home" style="width:9px"></span> </a></li>
             </ul>
            </nav>  
 </div>
